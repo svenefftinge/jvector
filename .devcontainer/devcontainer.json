@@ -1,0 +1,15 @@
+{
+  "name": "JVector Development Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/java:11",
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "redhat.java",
+    "vscjava.vscode-maven"
+  ],
+  "forwardPorts": [8080],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "echo 'Container ready for JVector development.'",
+  "postStartCommand": "mvn clean install"
+}

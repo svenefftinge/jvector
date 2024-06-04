@@ -325,4 +325,26 @@ The `... -Pjdk11` invocations will also work with `JAVA_HOME` pointing at a Java
 
 To release, configure `~/.m2/settings.xml` to point to OSSRH and run `mvn -Prelease clean deploy`.
 
----
+## Using the Development Container with Visual Studio Code
+
+To streamline the development process and ensure a consistent environment for all contributors, this project supports the use of a development container in Visual Studio Code. This approach leverages the `.devcontainer` configuration to create a Docker-based development environment that includes all necessary tools and extensions for project development and testing.
+
+### Prerequisites
+
+Before you can use the development container, ensure you have the following installed on your local machine:
+
+- Docker: Required for building and running the containerized development environment.
+- Visual Studio Code: The editor that supports the `.devcontainer` configuration.
+- Remote - Containers extension for Visual Studio Code: This extension allows you to open any folder inside (or mounted into) a container and take advantage of Visual Studio Code's full feature set.
+
+### Opening the Repository in a Dev Container
+
+To start working with the development container, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Open the repository folder in Visual Studio Code.
+3. When prompted by Visual Studio Code, choose to reopen the folder in a container. Alternatively, you can manually trigger the action by opening the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS) and selecting "Remote-Containers: Reopen in Container".
+4. Visual Studio Code will build the development container based on the configuration specified in `.devcontainer/devcontainer.json`. This process may take a few minutes the first time.
+5. Once the container is built and running, you can start coding with an environment that matches the project's requirements.
+
+By following these steps, you can ensure that your development environment is consistent with other contributors, minimizing "works on my machine" issues and streamlining the development process.
